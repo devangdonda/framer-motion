@@ -1,0 +1,9 @@
+.main-box {
+  width: 100px; /* Adjust the width as needed */
+  height: 50px; /* Adjust the height as needed */
+  background-color: purple;
+  position: absolute;
+  padding: 20px;
+  top: 40%;
+  left: 40%;
+}
