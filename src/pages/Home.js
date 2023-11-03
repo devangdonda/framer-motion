@@ -10,15 +10,16 @@ import workout from "../images/chest.jpg";
 import website from "../images/website.webp";
 import ProjectLink from "../projectLink/ProjectLink";
 import CourseList from "../CourseList";
+import {motion} from 'framer-motion';
 
 const Home = () => {
   const theme = useTheme();
-  const light = theme.palette.mode === "light"
+  const light = theme.palette.mode === "light";
 
   return (
     <div>
       <img
-        src={ light ? homeDay : homeNight}
+        src={light ? homeDay : homeNight}
         alt=""
         style={{ height: "100vh", width: "100%" }}
       />
@@ -38,28 +39,30 @@ const Home = () => {
             justifyContent: "stretch",
           }}
         >
-          <Paper
-            elevation={3}
-            sx={{
-              display: "flex",
-              width: "auto",
-              margin: 5,
-              marginTop: 3,
-              [theme.breakpoints.up("md")]: {
-                width: "35%",
-              },
-              boxSizing: "border-box",
-            }}
-          >
-            <Typography align="center" gutterBottom sx={{ padding: 2 }}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-              odit ut quam officia laborum alias, dolorem vel pariatur odio.
-              Repellat, molestias ipsum consequuntur earum odit totam hic
-              excepturi. Tempore ducimus eligendi blanditiis nulla
-              necessitatibus! In nulla fugiat alias itaque deleniti natus
-              suscipit, eligendi dolorem ea, aliquid quidem libero quo illo!
-            </Typography>
-          </Paper>
+          <motion.div animate={{x: 0}} initial={{x: '100vw'}} transition= {{type: 'spring',duration: 2, damping: 8}}>
+            <Paper
+              elevation={3}
+              sx={{
+                display: "flex",
+                width: "auto",
+                margin: 5,
+                marginTop: 3,
+                [theme.breakpoints.up("md")]: {
+                  width: "35%",
+                },
+                boxSizing: "border-box",
+              }}
+            >
+              <Typography align="center" gutterBottom sx={{ padding: 2 }}>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+                odit ut quam officia laborum alias, dolorem vel pariatur odio.
+                Repellat, molestias ipsum consequuntur earum odit totam hic
+                excepturi. Tempore ducimus eligendi blanditiis nulla
+                necessitatibus! In nulla fugiat alias itaque deleniti natus
+                suscipit, eligendi dolorem ea, aliquid quidem libero quo illo!
+              </Typography>
+            </Paper>
+          </motion.div>
 
           <Paper
             elevation={3}
@@ -85,14 +88,14 @@ const Home = () => {
             </Typography>
           </Paper>
           <Paper
-          elevation={6}
+            elevation={6}
             sx={{
               display: "flex",
               justifyContent: "center",
               marginTop: 4,
-              backgroundColor: light ? theme.palette.success.light : '#1b5e20',
+              backgroundColor: light ? theme.palette.success.light : "#1b5e20",
               height: "100vh",
-              borderRadius: 5
+              borderRadius: 5,
             }}
           >
             <Box
@@ -123,7 +126,7 @@ const Home = () => {
               padding: 3,
               margin: 8,
               alignSelf: "center",
-              backgroundColor: light ? theme.palette.primary.light : '#1565c0',
+              backgroundColor: light ? theme.palette.primary.light : "#1565c0",
               marginTop: "-8.5rem",
             }}
           >
