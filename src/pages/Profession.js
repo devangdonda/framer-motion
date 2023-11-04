@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
+import "./Profession.css";  
 
 const Profession = () => {
-    return (
-        <div>
-            This is Profession Page 
-        </div>
-    );
+  return (
+    <div>
+      asdf
+    </div>
+  );
 };
-
 
 export default Profession;
