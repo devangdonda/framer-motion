@@ -10,13 +10,16 @@ import workout from "../images/chest.jpg";
 import website from "../images/website.webp";
 import ProjectLink from "../projectLink/ProjectLink";
 import CourseList from "../CourseList";
-import CompA from "../CompA";
+import CompA from "../home/CompA";
 import WorkCard from "../WorkCard";
 import { Button } from "@mui/material";
 import PageImage from "../PageImage";
 import hilton from "../images/hilton-logo.jpg";
 import subway from "../images/subway-logo.png";
 import memorial from "../images/mun-logo.jpg";
+import { motion } from "framer-motion";
+import WelcomeHome from "../home/WelcomeHome";
+import HomeDescriptionWelcome from "../home/HomeDescriptionWelcome";
 
 const Home = () => {
   const theme = useTheme();
@@ -27,14 +30,7 @@ const Home = () => {
       <PageImage src={light ? homeDay : homeNight} />
       <div>
         <Paper elevation={5}>
-          <Typography
-            align="center"
-            variant="h2"
-            gutterBottom
-            sx={{ textDecoration: "underline" }}
-          >
-            Welcome
-          </Typography>
+          <WelcomeHome />
           <Box
             sx={{
               display: "flex",
@@ -42,60 +38,8 @@ const Home = () => {
               justifyContent: "stretch",
             }}
           >
-            <div
-              animate={{ x: 0 }}
-              initial={{ x: "100vw" }}
-              transition={{ type: "spring", duration: 2, damping: 8 }}
-            >
-              <Paper
-                elevation={3}
-                sx={{
-                  display: "flex",
-                  width: "auto",
-                  margin: 5,
-                  marginTop: 3,
-                  [theme.breakpoints.up("md")]: {
-                    width: "35%",
-                  },
-                  boxSizing: "border-box",
-                }}
-              >
-                <Typography align="center" gutterBottom sx={{ padding: 2 }}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-                  odit ut quam officia laborum alias, dolorem vel pariatur odio.
-                  Repellat, molestias ipsum consequuntur earum odit totam hic
-                  excepturi. Tempore ducimus eligendi blanditiis nulla
-                  necessitatibus! In nulla fugiat alias itaque deleniti natus
-                  suscipit, eligendi dolorem ea, aliquid quidem libero quo illo!
-                </Typography>
-              </Paper>
-            </div>
-
-            <Paper
-              elevation={3}
-              sx={{
-                display: "flex",
-                width: "auto",
-                boxSizing: "border-box",
-                margin: 5,
-                marginTop: 3,
-                alignSelf: "end",
-                [theme.breakpoints.up("md")]: {
-                  width: "35%",
-                },
-              }}
-            >
-              <Typography align="center" gutterBottom sx={{ padding: 2 }}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-                odit ut quam officia laborum alias, dolorem vel pariatur odio.
-                Repellat, molestias ipsum consequuntur earum odit totam hic
-                excepturi. Tempore ducimus eligendi blanditiis nulla
-                necessitatibus! In nulla fugiat alias itaque deleniti natus
-                suscipit, eligendi dolorem ea, aliquid quidem libero quo illo!
-              </Typography>
-            </Paper>
+            <HomeDescriptionWelcome />
             <CompA />
-
             <Typography
               variant="h4"
               align="center"
@@ -191,7 +135,7 @@ const Home = () => {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
-                flexWrap: 'wrap',
+                flexWrap: "wrap",
               }}
             >
               <WorkCard company="Hilton Garden Inn" src={hilton} />
@@ -199,25 +143,27 @@ const Home = () => {
               <WorkCard company="Memorial" src={memorial} />
               <WorkCard company="Subway" src={subway} />
 
-              <Paper elevation={5}
-              sx={{
-                display: "flex",
-                flexWrap: 'wrap',
-                flexDirection: 'column',
-                alignItems: "center",
-                margin: 3,
-                padding: 3, 
-              }}
-            >
-              <Typography variant='h4' gutterBottom>
-                To view my full Computer Science resume click here
-              </Typography>
+              <Paper
+                elevation={5}
+                sx={{
+                  display: "flex",
+                  flexWrap: "wrap",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  margin: 3,
+                  padding: 3,
+                }}
+              >
+                <Typography variant="h4" gutterBottom>
+                  To view my full Computer Science resume click here
+                </Typography>
 
-              <Button variant="contained"  sx={{width: '30%'}}> Resume</Button>
-            </Paper>
-
+                <Button variant="contained" sx={{ width: "30%" }}>
+                  {" "}
+                  Resume
+                </Button>
+              </Paper>
             </Box>
-            
           </Box>
         </Paper>
       </div>

@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useRef } from "react";
 import Paper from "@mui/material/Paper/Paper";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box/Box";
 import { useTheme } from "@mui/material/styles";
+import { motion } from "framer-motion";
 
 const CompA = () => {
+  const ref = useRef(null);
   const theme = useTheme();
   const light = theme.palette.mode === "light";
   return (
     <>
-      <Paper
+      <Paper 
         elevation={6}
         sx={{
           display: "flex",
@@ -42,31 +44,33 @@ const CompA = () => {
           </Typography>
         </Box>
       </Paper>
-      <Paper
-        elevation={6}
-        sx={{
-          padding: 3,
-          margin: 8,
-          alignSelf: "center",
-          backgroundColor: light ? theme.palette.primary.light : "#1565c0",
-          marginTop: "-8.5rem",
-        }}
-      >
-        <Typography>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit odit
-          ad, quisquam voluptas quaerat exercitationem aut modi molestias
-          suscipit veritatis delectus, dicta illo nulla cupiditate! Assumenda
-          quo magnam iure perferendis omnis. Quasi quas molestiae facilis sequi
-          corrupti cumque ab consectetur hic quibusdam delectus saepe esse
-          aperiam nulla eligendi doloribus nisi, ipsam excepturi, in eveniet!
-          Ex, magni sequi cumque quos iusto consequuntur! Possimus ipsa est
-          accusamus, assumenda repudiandae vitae error sunt quaerat molestias
-          quisquam inventore dicta aperiam doloremque ipsam fugiat quas
-          voluptatum vero unde ea asperiores pariatur. Optio totam perferendis
-          quae deserunt? Consequuntur ducimus consequatur harum, mollitia
-          nostrum facilis et unde!
-        </Typography>
-      </Paper>
+      <motion.div whileInView={{y: 0, opacity: 1 }} initial={{ y: '100vh', opacity: 0 }}>
+        <Paper
+          elevation={6}
+          sx={{
+            padding: 3,
+            margin: 8,
+            alignSelf: "center",
+            backgroundColor: light ? theme.palette.primary.light : "#1565c0",
+            marginTop: "-8.5rem",
+          }}
+        >
+          <Typography>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit odit
+            ad, quisquam voluptas quaerat exercitationem aut modi molestias
+            suscipit veritatis delectus, dicta illo nulla cupiditate! Assumenda
+            quo magnam iure perferendis omnis. Quasi quas molestiae facilis
+            sequi corrupti cumque ab consectetur hic quibusdam delectus saepe
+            esse aperiam nulla eligendi doloribus nisi, ipsam excepturi, in
+            eveniet! Ex, magni sequi cumque quos iusto consequuntur! Possimus
+            ipsa est accusamus, assumenda repudiandae vitae error sunt quaerat
+            molestias quisquam inventore dicta aperiam doloremque ipsam fugiat
+            quas voluptatum vero unde ea asperiores pariatur. Optio totam
+            perferendis quae deserunt? Consequuntur ducimus consequatur harum,
+            mollitia nostrum facilis et unde!
+          </Typography>
+        </Paper>
+      </motion.div>
     </>
   );
 };
