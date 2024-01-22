@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/framer-motion/static/css/main.121a6061.css",
+    "main.js": "/framer-motion/static/js/main.00aab0d1.js",
+    "static/media/homeDay.jpg": "/framer-motion/static/media/homeDay.bb3e2a6cbb6b16998d29.jpg",
+    "static/media/homeNight.jpg": "/framer-motion/static/media/homeNight.85d66d2b4d25741f1a68.jpg",
+    "static/media/chest.jpg": "/framer-motion/static/media/chest.e6469f5c5ab276b4debf.jpg",
+    "static/media/hilton-logo.jpg": "/framer-motion/static/media/hilton-logo.8a83ff45f008a36892d9.jpg",
+    "static/media/mun-logo.jpg": "/framer-motion/static/media/mun-logo.6174180c6fe22080d885.jpg",
+    "static/media/cantStop.jpg": "/framer-motion/static/media/cantStop.7c03e419c0a36e509506.jpg",
+    "static/media/subway-logo.png": "/framer-motion/static/media/subway-logo.c2d3cb81e2f6f2231c93.png",
+    "static/media/website.webp": "/framer-motion/static/media/website.2b2bdf2e6121ebf3b398.webp",
+    "index.html": "/framer-motion/index.html",
+    "main.121a6061.css.map": "/framer-motion/static/css/main.121a6061.css.map",
+    "main.00aab0d1.js.map": "/framer-motion/static/js/main.00aab0d1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.121a6061.css",
+    "static/js/main.00aab0d1.js"
+  ]
+}
